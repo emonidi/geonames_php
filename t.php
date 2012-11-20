@@ -1,7 +1,7 @@
 <?php
 
 	require "Geonames.php";
-	$g = new Geonames('aero_students');
+	$g = new Geonames('demo');
 	$city  = $g->search(array('name_startsWith'=>'Sofia',"lang"=>"BG"));
 	$city = $city->geonames['0'];
 	$weather =  $g->findNearByWeather(array('lat'=>$city->lat,'lng'=>$city->lng));
